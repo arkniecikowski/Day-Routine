@@ -13,6 +13,15 @@ public class DayService {
     @Autowired
     public FakeDayRoutineDao fakeDayRoutineDao;
 
-    public HashMap<Integer, String> getMyDay() { return fakeDayRoutineDao.getMyDay(); }
+    public HashMap<Integer, String> getMyDay() { return fakeDayRoutineDao.getMyDayRoutine(); }
+
+    public String getMyDayRoutineOnTime(Integer i) { return fakeDayRoutineDao.getMyDayRoutineOnTime(i); }
+
+    public HashMap<Integer, String> getMyDayRoutineBetween(Integer a, Integer b) {
+        return fakeDayRoutineDao.getMyDayRoutineBetween(a, b);
+    }
+
+    public int getTimeSpent(String a) { return fakeDayRoutineDao.getTimeSpent(a); }
+
 
 }
